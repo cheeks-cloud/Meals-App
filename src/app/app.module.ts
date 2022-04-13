@@ -1,16 +1,26 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
+
+
+
 import { AppComponent } from './app.component';
+import { MealListComponent } from './Components/meal-list/meal-list.component';
+import { MealComponent } from './Components/meal/meal.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MealListComponent,
+    MealComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
